@@ -1,0 +1,402 @@
+[
+  {
+    "user_input":"What is the gift limit employees can accept from a vendor?",
+    "retrieved_contexts":[
+      "Employees may not accept gifts exceeding $75 in value from any single  vendor, client, or business partner within a calendar year.",
+      "Gifts exceeding the $75 limit that cannot reasonably be declined (e.g.  unsolicited items received by mail) must be reported to the employee's  manager and logged with the Compliance team within 5 business days.    ## Section 3: Entertainment & Meals",
+      "Employees may give gifts or entertainment to external parties (e.g.  clients) under the same $75 \/ $150 \/ $200 thresholds defined above.",
+      "Employees involved in bid evaluation may not accept gifts or  entertainment from bidding vendors during the evaluation period, per the  Gifts & Entertainment Policy (COC-04).",
+      "Employees may not accept entertainment invitations that involve travel  or overnight accommodation paid for by an external party without prior  written approval from the Compliance team.    ## Section 4: Giving Gifts to Others"
+    ],
+    "response":"Employees may not accept gifts exceeding $75 in value from any single vendor within a calendar year.",
+    "reference":"Employees may not accept gifts exceeding $75 in value from any single vendor, client, or business partner within a calendar year.",
+    "context_precision":1.0,
+    "context_recall":1.0,
+    "faithfulness":1.0,
+    "answer_relevancy":0.899490555
+  },
+  {
+    "user_input":"Are cash gifts allowed under company policy?",
+    "retrieved_contexts":[
+      "Cash or cash-equivalent gifts (including gift cards) of any amount are  strictly prohibited and must be declined or returned.",
+      "Gifts or entertainment offered to government officials or public sector  employees are subject to stricter limits under the Anti-Bribery & Anti-  Corruption Policy (COC-05) and generally require pre-approval regardless of  value.    ## Section 5: Reporting Violations",
+      "Employees may not accept gifts exceeding $75 in value from any single  vendor, client, or business partner within a calendar year.",
+      "Meals with clients or vendors are reimbursed separately under the  Gifts & Entertainment Policy (COC-04) and are not counted against the  per diem allowance.    ## Section 5: Receipts",
+      "Gifts exceeding the $75 limit that cannot reasonably be declined (e.g.  unsolicited items received by mail) must be reported to the employee's  manager and logged with the Compliance team within 5 business days.    ## Section 3: Entertainment & Meals"
+    ],
+    "response":"Cash gifts (including cash-equivalent gifts like gift cards) of any amount are strictly prohibited under company policy and must be declined or returned.",
+    "reference":"No, cash or cash-equivalent gifts, including gift cards, of any amount are strictly prohibited and must be declined or returned.",
+    "context_precision":0.9999999999,
+    "context_recall":1.0,
+    "faithfulness":1.0,
+    "answer_relevancy":0.9405428985
+  },
+  {
+    "user_input":"What is the process for reporting a conflict of interest?",
+    "retrieved_contexts":[
+      "All employees complete an annual Conflict of Interest disclosure form,  regardless of whether they believe a conflict exists.",
+      "This policy identifies situations where an employee's personal  interests could conflict with the interests of Solara Technologies Inc.,  and establishes a process for disclosure and management of such conflicts.    ## Section 2: Examples of Conflicts of Interest",
+      "Employees must disclose any actual or potential conflict of interest to  their manager and the Compliance team within 10 business days of becoming  aware of it.",
+      "Employees involved in procurement decisions must disclose any conflict  of interest per the Conflict of Interest Policy (COC-02) before  participating in a vendor selection.",
+      "Failure to disclose a known conflict of interest is treated as a  violation of the Code of Business Conduct (COC-01)."
+    ],
+    "response":"Employees must report any actual or potential conflict of interest to their manager and the Compliance team within 10 business days of becoming aware of it. Additionally, all employees must complete an annual Conflict of Interest disclosure form, regardless of whether a conflict exists. Employees involved in procurement decisions must disclose any conflict of interest prior to participating in vendor selection.",
+    "reference":"Employees must disclose any actual or potential conflict of interest to their manager and the Compliance team within 10 business days of becoming aware of it.",
+    "context_precision":0.3333333333,
+    "context_recall":1.0,
+    "faithfulness":1.0,
+    "answer_relevancy":0.8229030728
+  },
+  {
+    "user_input":"What happens if an employee retaliates against someone who reports harassment?",
+    "retrieved_contexts":[
+      "Retaliation against an employee who reports harassment or participates  in an investigation is strictly prohibited and is itself a violation of  this policy.    ## Section 3: Reporting Process",
+      "Any employee found to have retaliated against a whistleblower will face  disciplinary action up to and including termination.    ## Section 4: Investigation Process",
+      "Employees who experience or witness harassment should report it to  their manager, HR, or via the confidential Whistleblower channel (COC-07).",
+      "Solara Technologies Inc. strictly prohibits retaliation against any  employee who makes a good-faith report under this policy.",
+      "Any employee who becomes aware of a violation of this policy must report  it via the Whistleblower & Reporting Policy (COC-07) channels."
+    ],
+    "response":"Retaliation against an employee who reports harassment is strictly prohibited and constitutes a policy violation. Under the Whistleblower & Reporting Policy, any employee found to have retaliated will face disciplinary action up to and including termination.",
+    "reference":"Retaliation against an employee who reports harassment or participates in an investigation is strictly prohibited and is itself a violation of policy.",
+    "context_precision":0.9166666666,
+    "context_recall":1.0,
+    "faithfulness":1.0,
+    "answer_relevancy":1.0
+  },
+  {
+    "user_input":"Are facilitation payments to government officials allowed?",
+    "retrieved_contexts":[
+      "Facilitation payments (small payments to expedite routine government  action) are prohibited without exception.    ## Section 3: Gifts to Government Officials",
+      "Gifts or entertainment offered to government officials or public sector  employees are subject to stricter limits under the Anti-Bribery & Anti-  Corruption Policy (COC-05) and generally require pre-approval regardless of  value.    ## Section 5: Reporting Violations",
+      "Any gift, meal, or entertainment offered to a government official,  regardless of value, requires pre-approval from the Compliance team before  being offered. This is stricter than the general limits in the Gifts &  Entertainment Policy (COC-04).    ## Section 4: Third-Party Due Diligence",
+      "Employees may not offer, promise, give, or authorize anything of value  to any person, including government officials, to improperly influence a  business decision.",
+      "Expenses that do not comply with this policy may be denied  reimbursement or may require additional manager approval before payment."
+    ],
+    "response":"No, facilitation payments to government officials are strictly prohibited without exception.",
+    "reference":"No, facilitation payments (small payments to expedite routine government action) are prohibited without exception.",
+    "context_precision":0.75,
+    "context_recall":1.0,
+    "faithfulness":1.0,
+    "answer_relevancy":0.991570023
+  },
+  {
+    "user_input":"How long do confidentiality obligations last after an employee leaves the company?",
+    "retrieved_contexts":[
+      "Confidentiality obligations continue after termination of employment,  as specified in each employee's signed confidentiality agreement.    ## Section 4: Data Handling",
+      "Employee personnel records are retained for 7 years after termination  of employment.",
+      "Customer account data is retained for 3 years after account closure,  unless a longer period is required by law.",
+      "Confidential information must not be shared with any external party  without a signed Non-Disclosure Agreement (NDA) and appropriate approval.    ## Section 3: Employee Obligations",
+      "Employees may request access to their own personnel file by submitting  a request to HR, which must be fulfilled within 15 business days.    ## Section 4: Monitoring"
+    ],
+    "response":"Confidentiality obligations continue after termination of employment for the duration specified in each individual employee's signed confidentiality agreement.",
+    "reference":"Confidentiality obligations continue after termination of employment, as specified in each employee's signed confidentiality agreement.",
+    "context_precision":0.9999999999,
+    "context_recall":1.0,
+    "faithfulness":1.0,
+    "answer_relevancy":0.9270464021
+  },
+  {
+    "user_input":"Can I report a policy violation anonymously?",
+    "retrieved_contexts":[
+      "Any employee who becomes aware of a violation of this policy must report  it via the Whistleblower & Reporting Policy (COC-07) channels.",
+      "This policy provides a confidential channel for employees to report  suspected violations of law, policy, or ethical standards without fear of  retaliation.    ## Section 2: How to Report",
+      "Suspected violations must be reported immediately via the Whistleblower  & Reporting Policy (COC-07).",
+      "Violations of information security policies may result in disciplinary  action, up to and including termination, and may be reported per the  Whistleblower & Reporting Policy (COC-07) if they involve suspected  misconduct.",
+      "Retaliation against an employee who reports harassment or participates  in an investigation is strictly prohibited and is itself a violation of  this policy.    ## Section 3: Reporting Process"
+    ],
+    "response":"The provided policy corpus does not state whether policy violations can be reported anonymously. It only mentions that a confidential channel is provided under the Whistleblower & Reporting Policy (COC-07).",
+    "reference":"Yes, anonymous reports are accepted and will be investigated to the extent possible given the information provided.",
+    "context_precision":0.0,
+    "context_recall":0.0,
+    "faithfulness":1.0,
+    "answer_relevancy":0.0
+  },
+  {
+    "user_input":"What data classification level requires encryption at all times?",
+    "retrieved_contexts":[
+      "Restricted data must be encrypted using company-approved encryption  standards at all times, whether stored or transmitted.",
+      "\\*\\*Restricted\\*\\* \u2014 highly sensitive personal or regulated data (e.g.  social security numbers, health records, payment card data). Requires  encryption at rest and in transit, and access logging.    ## Section 3: Handling Requirements",
+      "All documents and datasets must be labeled with their classification  level at the time of creation.",
+      "Company-issued laptops must have full-disk encryption, endpoint  protection software, and automatic security updates enabled at all times.",
+      "Confidential information stored electronically must comply with the  data classification and handling rules in the Data Classification Policy  (PRIV-02)."
+    ],
+    "response":"The Restricted data classification level requires encryption at all times, whether stored or transmitted (at rest and in transit).",
+    "reference":"Restricted data must be encrypted using company-approved encryption standards at all times, whether stored or transmitted.",
+    "context_precision":1.0,
+    "context_recall":1.0,
+    "faithfulness":1.0,
+    "answer_relevancy":null
+  },
+  {
+    "user_input":"How long is customer account data retained after account closure?",
+    "retrieved_contexts":[
+      "Customer account data is retained for 3 years after account closure,  unless a longer period is required by law.",
+      "Marketing and analytics data is retained for 2 years from collection,  after which it must be anonymized or deleted.    ## Section 3: Deletion Process",
+      "Employee personnel records are retained for 7 years after termination  of employment.",
+      "Financial and tax-related records are retained for 7 years, per  regulatory requirements.",
+      "Deletion requests from customers (e.g. under applicable privacy law)  must be processed within 30 days of verified request, per the Customer Data  Access & Consent Policy (PRIV-07).    ## Section 4: Legal Holds"
+    ],
+    "response":"Customer account data is retained for 3 years after account closure, unless a longer period is required by law.",
+    "reference":"Customer account data is retained for 3 years after account closure, unless a longer period is required by law.",
+    "context_precision":0.9999999999,
+    "context_recall":1.0,
+    "faithfulness":1.0,
+    "answer_relevancy":0.9811006976
+  },
+  {
+    "user_input":"What must be in place before sharing personal data with a third party?",
+    "retrieved_contexts":[
+      "Personal data may only be shared with a third party after a signed Data  Processing Agreement (DPA) is in place.",
+      "Contracts involving personal data processing must include data  protection terms consistent with the Third-Party Data Sharing Policy  (PRIV-04).    ## Section 3: Signing Authority",
+      "This policy governs how Solara Technologies Inc. shares personal data  with vendors, partners, and other third parties.    ## Section 2: Requirements Before Sharing",
+      "Explicit consent must be obtained before collecting personal data for  purposes beyond providing the core service (e.g. marketing communications).",
+      "Personal data must be collected only for specified, legitimate business  purposes and not used beyond those purposes without consent."
+    ],
+    "response":"A signed Data Processing Agreement (DPA) must be in place before personal data may be shared with a third party.",
+    "reference":"Personal data may only be shared with a third party after a signed Data Processing Agreement (DPA) is in place.",
+    "context_precision":1.0,
+    "context_recall":1.0,
+    "faithfulness":1.0,
+    "answer_relevancy":0.9844953994
+  },
+  {
+    "user_input":"Who can access an employee's personal data within the company?",
+    "retrieved_contexts":[
+      "Employee personal data is accessible only to HR staff, the employee's  direct manager (for relevant records), and Payroll, on a need-to-know basis.",
+      "Access to personal data is restricted to employees who require it for  their job duties, per the Data Classification Policy (PRIV-02).    ## Section 3: Roles & Responsibilities",
+      "All employees who handle personal data must complete annual privacy  training.    ## Section 4: Related Policies",
+      "Vendors with access to personal data are reviewed annually to confirm  continued compliance with this policy and the applicable DPA.",
+      "Employees may only access confidential information necessary for their  job duties."
+    ],
+    "response":"Within the company, employee personal data is accessible only to HR staff, the employee's direct manager (for relevant records), and Payroll, on a need-to-know basis. More generally, access to personal data is restricted to employees who require it for their job duties.",
+    "reference":"Employee personal data is accessible only to HR staff, the employee's direct manager for relevant records, and Payroll, on a need-to-know basis.",
+    "context_precision":1.0,
+    "context_recall":1.0,
+    "faithfulness":0.8,
+    "answer_relevancy":0.9802491382
+  },
+  {
+    "user_input":"How quickly must a suspected data breach be reported?",
+    "retrieved_contexts":[
+      "Any employee who suspects a data breach must report it to the Security  team immediately, and no later than 2 hours after discovery.",
+      "The Security team must assess and classify the severity of a suspected  breach within 24 hours of the initial report.    ## Section 3: Notification Requirements",
+      "Any vendor data breach involving Solara data must be reported to Solara  within 48 hours of the vendor becoming aware, per the Data Breach Response  Policy (PRIV-06).",
+      "Any suspected security incident (e.g. malware, unauthorized access,  lost device) must be reported to the Security team immediately, and no  later than 2 hours after discovery.    ## Section 3: Incident Classification",
+      "For breaches involving Restricted data (per PRIV-02), affected  individuals must be notified within 72 hours of confirmation, where legally  required."
+    ],
+    "response":"Any employee who suspects a data breach must report it to the Security team immediately, and no later than 2 hours after discovery. Additionally, vendor data breaches involving Solara data must be reported to Solara within 48 hours of the vendor becoming aware.",
+    "reference":"Any employee who suspects a data breach must report it to the Security team immediately, and no later than 2 hours after discovery.",
+    "context_precision":0.75,
+    "context_recall":1.0,
+    "faithfulness":1.0,
+    "answer_relevancy":0.9027454323
+  },
+  {
+    "user_input":"Can a customer withdraw consent for data collection at any time?",
+    "retrieved_contexts":[
+      "Customers may withdraw consent at any time through their account  settings or by contacting support.    ## Section 3: Customer Access Rights",
+      "Deletion requests from customers (e.g. under applicable privacy law)  must be processed within 30 days of verified request, per the Customer Data  Access & Consent Policy (PRIV-07).    ## Section 4: Legal Holds",
+      "Explicit consent must be obtained before collecting personal data for  purposes beyond providing the core service (e.g. marketing communications).",
+      "Customer account data is retained for 3 years after account closure,  unless a longer period is required by law.",
+      "Customers may request correction of inaccurate data or deletion of  their data, subject to the retention rules in the Data Retention & Deletion  Policy (PRIV-03) and any applicable legal holds.    ## Section 4: Verification"
+    ],
+    "response":"Yes, customers may withdraw consent at any time through their account settings or by contacting support.",
+    "reference":"Yes, customers may withdraw consent at any time through their account settings or by contacting support.",
+    "context_precision":0.9999999999,
+    "context_recall":1.0,
+    "faithfulness":1.0,
+    "answer_relevancy":0.9252966097
+  },
+  {
+    "user_input":"What class must domestic flights under 5 hours be booked in?",
+    "retrieved_contexts":[
+      "Domestic flights must be booked in Economy class for flights under 5  hours.",
+      "International flights under 8 hours must be booked in Economy class.",
+      "International flights of 8 hours or more may be booked in Premium  Economy class.    ## Section 4: Hotel Accommodation",
+      "Flights should be booked at least 14 days in advance where possible to  secure lower fares.",
+      "Rental cars must be booked in the \"midsize\" category or below, unless a  larger vehicle is required for equipment transport, which requires manager  approval."
+    ],
+    "response":"Domestic flights under 5 hours must be booked in Economy class.",
+    "reference":"Domestic flights must be booked in Economy class for flights under 5 hours.",
+    "context_precision":0.9999999999,
+    "context_recall":1.0,
+    "faithfulness":1.0,
+    "answer_relevancy":1.0
+  },
+  {
+    "user_input":"Do I need approval for international travel?",
+    "retrieved_contexts":[
+      "International travel requires pre-approval from a Director-level  manager or above, submitted at least 21 days before departure where  possible.",
+      "This policy sets standards for international business travel, including  additional approvals and safety requirements beyond domestic travel.    ## Section 2: Approval Requirements",
+      "Travel to countries on the company's restricted travel list requires  additional approval from the Security team.    ## Section 3: Air Travel",
+      "International hotel bookings are capped at $300 per night, or the  locally appropriate equivalent for high-cost cities, subject to Director  approval for exceptions.    ## Section 5: Safety & Insurance",
+      "Employees may not accept entertainment invitations that involve travel  or overnight accommodation paid for by an external party without prior  written approval from the Compliance team.    ## Section 4: Giving Gifts to Others"
+    ],
+    "response":"Yes, international travel requires pre-approval from a Director-level manager or above, submitted at least 21 days before departure where possible. Additionally, travel to countries on the company's restricted travel list requires additional approval from the Security team.",
+    "reference":"Yes, international travel requires pre-approval from a Director-level manager or above, submitted at least 21 days before departure where possible.",
+    "context_precision":1.0,
+    "context_recall":1.0,
+    "faithfulness":1.0,
+    "answer_relevancy":null
+  },
+  {
+    "user_input":"What is the standard domestic meal per diem?",
+    "retrieved_contexts":[
+      "The standard domestic meal per diem is $75 per day, covering breakfast,  lunch, and dinner.",
+      "The standard international meal per diem is $90 per day, or the  locally appropriate equivalent for high-cost cities as published by the  Finance team.    ## Section 4: Client Meals",
+      "For designated high-cost cities, the domestic meal per diem is $100 per  day.    ## Section 3: International Per Diem Rates",
+      "This policy establishes daily meal allowances (per diem) for employees  traveling on approved company business.    ## Section 2: Domestic Per Diem Rates",
+      "Meals with clients or vendors are reimbursed separately under the  Gifts & Entertainment Policy (COC-04) and are not counted against the  per diem allowance.    ## Section 5: Receipts"
+    ],
+    "response":"The standard domestic meal per diem is $75 per day, covering breakfast, lunch, and dinner.",
+    "reference":"The standard domestic meal per diem is $75 per day, covering breakfast, lunch, and dinner.",
+    "context_precision":0.9999999999,
+    "context_recall":1.0,
+    "faithfulness":1.0,
+    "answer_relevancy":1.0
+  },
+  {
+    "user_input":"What is the mileage reimbursement rate for using a personal vehicle?",
+    "retrieved_contexts":[
+      "Employees using a personal vehicle for business travel are reimbursed  at $0.67 per mile, consistent with the standard company mileage rate.",
+      "This policy governs reimbursement for ground transportation, including  rideshare, taxi, rental car, and personal vehicle use for business travel.    ## Section 2: Rideshare & Taxi",
+      "Optional insurance add-ons are not reimbursable where the company's  corporate insurance already provides coverage.    ## Section 4: Personal Vehicle Mileage",
+      "Employees may retain frequent flyer miles or loyalty points earned  during business travel for personal use.    ## Section 3: Hotel Accommodation",
+      "This policy establishes guidelines for business travel and expense  reimbursement to ensure responsible use of company funds while supporting  employees' business travel needs."
+    ],
+    "response":"Employees using a personal vehicle for business travel are reimbursed at a rate of $0.67 per mile.",
+    "reference":"Employees using a personal vehicle for business travel are reimbursed at $0.67 per mile.",
+    "context_precision":0.9999999999,
+    "context_recall":1.0,
+    "faithfulness":1.0,
+    "answer_relevancy":0.8943931244
+  },
+  {
+    "user_input":"How long do I have to submit an expense report?",
+    "retrieved_contexts":[
+      "Expense reports must be submitted within 30 days of the expense being  incurred.",
+      "Expenses submitted more than 90 days after being incurred will not be  reimbursed except in exceptional circumstances approved by Finance.    ## Section 3: Approval Workflow",
+      "Approved expense reports are reimbursed within 10 business days of  final approval.    ## Section 5: Prohibited Expenses",
+      "Cardholders must reconcile all corporate card transactions in the  expense system within 30 days, per the Expense Reporting & Reimbursement  Policy (TE-06).    ## Section 5: Card Suspension",
+      "Expense reports exceeding $2,000 in total require additional approval  from a Director-level manager or above.    ## Section 4: Reimbursement Timeline"
+    ],
+    "response":"Expense reports must be submitted within 30 days of the expense being incurred. Expenses submitted more than 90 days after being incurred will not be reimbursed except in exceptional circumstances approved by Finance.",
+    "reference":"Expense reports must be submitted within 30 days of the expense being incurred.",
+    "context_precision":0.75,
+    "context_recall":1.0,
+    "faithfulness":0.6666666667,
+    "answer_relevancy":0.9124489406
+  },
+  {
+    "user_input":"Can I use my corporate card for personal purchases if I plan to pay it back?",
+    "retrieved_contexts":[
+      "Personal purchases on a corporate card are strictly prohibited, even if  the employee intends to reimburse the company later.    ## Section 4: Reconciliation",
+      "Corporate cards may only be used for approved business expenses,  including travel, client meals (per COC-04), and approved office supplies.",
+      "Corporate cards are issued to employees who travel frequently or incur  regular business expenses, subject to manager approval.    ## Section 3: Permitted Use",
+      "Cardholders must reconcile all corporate card transactions in the  expense system within 30 days, per the Expense Reporting & Reimbursement  Policy (TE-06).    ## Section 5: Card Suspension",
+      "Repeated late reconciliation or misuse of a corporate card may result  in card suspension and disciplinary action."
+    ],
+    "response":"No, personal purchases on a corporate card are strictly prohibited, even if you intend to reimburse the company later.",
+    "reference":"No, personal purchases on a corporate card are strictly prohibited, even if the employee intends to reimburse the company later.",
+    "context_precision":1.0,
+    "context_recall":1.0,
+    "faithfulness":1.0,
+    "answer_relevancy":null
+  },
+  {
+    "user_input":"What approval is needed for a purchase between $10,000 and $50,000?",
+    "retrieved_contexts":[
+      "Purchases between $10,000 and $50,000 require Vice President approval.",
+      "Purchases between $1,000 and $10,000 require Director-level approval.",
+      "Purchases exceeding $50,000 require Chief Financial Officer approval  and must follow the Competitive Bidding Policy (PROC-04).    ## Section 3: Purchase Order Process",
+      "Purchases under $1,000 require manager approval only.",
+      "Sole source purchases exceeding $50,000 require written justification  approved by the Chief Financial Officer.    ## Section 3: Emergency Procurement"
+    ],
+    "response":"Purchases between $10,000 and $50,000 require Vice President approval.",
+    "reference":"Purchases between $10,000 and $50,000 require Vice President approval.",
+    "context_precision":0.9999999999,
+    "context_recall":1.0,
+    "faithfulness":1.0,
+    "answer_relevancy":null
+  },
+  {
+    "user_input":"How many competitive bids are required for purchases over $50,000?",
+    "retrieved_contexts":[
+      "Purchases exceeding $50,000 require a minimum of 3 competitive bids  before vendor selection, unless a sole source exception applies under  PROC-06.",
+      "Purchases exceeding $50,000 require Chief Financial Officer approval  and must follow the Competitive Bidding Policy (PROC-04).    ## Section 3: Purchase Order Process",
+      "Purchases between $10,000 and $50,000 require Vice President approval.",
+      "This policy requires competitive bidding for larger purchases to ensure  fair pricing and vendor selection.    ## Section 2: Bidding Requirements",
+      "Sole source purchases exceeding $50,000 require written justification  approved by the Chief Financial Officer.    ## Section 3: Emergency Procurement"
+    ],
+    "response":"Purchases exceeding $50,000 require a minimum of 3 competitive bids before vendor selection, unless a sole source exception applies under PROC-06.",
+    "reference":"Purchases exceeding $50,000 require a minimum of 3 competitive bids before vendor selection, unless a sole source exception applies.",
+    "context_precision":0.9999999999,
+    "context_recall":1.0,
+    "faithfulness":1.0,
+    "answer_relevancy":null
+  },
+  {
+    "user_input":"What password length is required for company systems?",
+    "retrieved_contexts":[
+      "MFA is required for all remote access to company systems, per the  Remote Work & Device Security Policy (SEC-04).    ## Section 4: Account Lockout",
+      "Passwords must be a minimum of 14 characters and include a mix of  uppercase, lowercase, numbers, and symbols.",
+      "This policy defines minimum standards for passwords and authentication  used to access Solara Technologies Inc. systems.    ## Section 2: Password Requirements",
+      "Personal devices used to access company email or systems (BYOD) must be  enrolled in the company's mobile device management (MDM) system.    ## Section 3: Network Security",
+      "Multi-factor authentication (MFA) is required for all access to  systems containing Confidential or Restricted data (per PRIV-02)."
+    ],
+    "response":"Passwords must be a minimum of 14 characters long and include a mix of uppercase, lowercase, numbers, and symbols.",
+    "reference":"Passwords must be a minimum of 14 characters and include a mix of uppercase, lowercase, numbers, and symbols.",
+    "context_precision":0.5,
+    "context_recall":1.0,
+    "faithfulness":1.0,
+    "answer_relevancy":0.8215031916
+  },
+  {
+    "user_input":"How quickly must access be revoked when an employee is terminated?",
+    "retrieved_contexts":[
+      "All system access must be revoked within 4 hours of an employee's  termination or resignation becoming effective.",
+      "New employee access is provisioned within 2 business days of the  employee's start date, based on their role.    ## Section 4: Access Review",
+      "Employees may request access to their own personnel file by submitting  a request to HR, which must be fulfilled within 15 business days.    ## Section 4: Monitoring",
+      "Deletion requests from customers (e.g. under applicable privacy law)  must be processed within 30 days of verified request, per the Customer Data  Access & Consent Policy (PRIV-07).    ## Section 4: Legal Holds",
+      "Employee personnel records are retained for 7 years after termination  of employment."
+    ],
+    "response":"All system access must be revoked within 4 hours of an employee's termination becoming effective.",
+    "reference":"All system access must be revoked within 4 hours of an employee's termination or resignation becoming effective.",
+    "context_precision":0.9999999999,
+    "context_recall":1.0,
+    "faithfulness":1.0,
+    "answer_relevancy":0.9647498531
+  },
+  {
+    "user_input":"What is the CEO's home address?",
+    "retrieved_contexts":[
+      "System access is reviewed quarterly by managers to confirm continued  business need.    ## Section 5: Access Revocation",
+      "The standard domestic meal per diem is $75 per day, covering breakfast,  lunch, and dinner.",
+      "Corporate cards are issued to employees who travel frequently or incur  regular business expenses, subject to manager approval.    ## Section 3: Permitted Use",
+      "Information security is a shared responsibility across all employees,  not solely the Security team.",
+      "Contracts exceeding $50,000 require signature from a Vice President or  the Chief Financial Officer.    ## Section 4: Contract Storage"
+    ],
+    "response":"The provided policy corpus does not contain information regarding the CEO's home address.",
+    "reference":"The policy corpus does not contain any information about individual employee home addresses, including the CEO's.",
+    "context_precision":0.0,
+    "context_recall":1.0,
+    "faithfulness":1.0,
+    "answer_relevancy":0.0
+  },
+  {
+    "user_input":"What is the company's stock price today?",
+    "retrieved_contexts":[
+      "Purchases exceeding $50,000 require Chief Financial Officer approval  and must follow the Competitive Bidding Policy (PROC-04).    ## Section 3: Purchase Order Process",
+      "The standard domestic meal per diem is $75 per day, covering breakfast,  lunch, and dinner.",
+      "The standard international meal per diem is $90 per day, or the  locally appropriate equivalent for high-cost cities as published by the  Finance team.    ## Section 4: Client Meals",
+      "For designated high-cost cities, the domestic meal per diem is $100 per  day.    ## Section 3: International Per Diem Rates",
+      "Bids must be evaluated on price, quality, delivery timeline, and vendor  risk profile (per the Vendor Onboarding Policy, PROC-02), not price alone.    ## Section 4: Vendor Communication"
+    ],
+    "response":"The provided policy corpus does not contain information regarding the company's stock price.",
+    "reference":"The policy corpus does not contain real-time financial or stock price information.",
+    "context_precision":0.7,
+    "context_recall":1.0,
+    "faithfulness":null,
+    "answer_relevancy":0.0
+  }
+]
