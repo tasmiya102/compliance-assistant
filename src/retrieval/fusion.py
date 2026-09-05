@@ -16,7 +16,7 @@ from semantic_search import semantic_search
 
 
 def reciprocal_rank_fusion(bm25_results: list[dict], semantic_results: list[dict],
-                            k: int = 60, top_k: int = 5) -> list[dict]:
+                            k: int, top_k: int = 5) -> list[dict]:
     """
     Combines two ranked result lists using RRF.
     Formula: score = sum of 1 / (k + rank) across each list a chunk appears in.
@@ -62,7 +62,7 @@ if __name__ == "__main__":
     semantic_results = semantic_search(query, top_k=10)
 
     print("\nFusing results with RRF...\n")
-    fused = reciprocal_rank_fusion(bm25_results, semantic_results, top_k=5)
+    fused = reciprocal_rank_fusion(bm25_results, semantic_results, k=60, top_k=5)
 
     for i, r in enumerate(fused, 1):
         print(f"{i}. [{r['doc_id']} - {r['clause_id']}] (RRF score: {r['rrf_score']:.4f})")

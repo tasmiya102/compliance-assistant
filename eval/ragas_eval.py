@@ -13,7 +13,10 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from dotenv import load_dotenv
 from datasets import Dataset
 from ragas import evaluate
-from ragas.metrics import context_precision, context_recall, faithfulness, answer_relevancy
+from ragas.metrics import context_precision, context_recall, faithfulness
+from ragas.metrics import AnswerRelevancy
+
+answer_relevancy = AnswerRelevancy(strictness=1)
 from ragas.llms import LangchainLLMWrapper
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_google_genai import ChatGoogleGenerativeAI

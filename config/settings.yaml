@@ -1,0 +1,29 @@
+# Chunking settings
+chunking:
+  strategy: "clause-based"   # splits by numbered clause (e.g. 2.1, 2.2), not fixed character count
+  min_chunk_chars: 50        # skip near-empty fragments
+
+# Embedding settings
+embeddings:
+  provider: "local"          # sentence-transformers, runs on your laptop, no API quota
+  model_name: "BAAI/bge-small-en-v1.5"
+
+# Vector store settings
+vector_store:
+  provider: "chroma"
+  persist_path: "./chroma_store"
+  collection_name: "policy_corpus"
+
+# Retrieval settings
+retrieval:
+  bm25_top_k: 20
+  semantic_top_k: 20
+  fusion_top_k: 15
+  final_top_k: 5
+  rrf_k: 60
+
+# Generation settings
+generation:
+  model_name: "gemini-3.6-flash"
+  temperature: 0
+  max_output_tokens: 1024

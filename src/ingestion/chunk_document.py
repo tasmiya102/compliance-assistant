@@ -7,6 +7,14 @@ We're testing this on a single file first before running it on all 34.
 
 import re
 from pathlib import Path
+import tiktoken
+
+_encoder = tiktoken.get_encoding("cl100k_base")
+
+def count_tokens(text: str) -> int:
+    """Counts tokens using the same tokenizer family as Gemini-comparable models,
+    so chunk_size decisions are made in tokens, not raw character counts."""
+    return len(_encoder.encode(text))
 
 def parse_document(filepath: str) -> list[dict]:
     """
@@ -43,7 +51,10 @@ def parse_document(filepath: str) -> list[dict]:
             "clause_id": clause_id,
             "text": clause_text,
             "source_file": filepath,
+            "token_count": count_tokens(clause_text),
         })
+        
+        
 
     return chunks
 

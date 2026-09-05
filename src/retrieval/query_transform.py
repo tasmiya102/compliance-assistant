@@ -46,19 +46,27 @@ as-is, on a single line.
 
 Do not answer the question. Only output the sub-question(s)."""
 
-    response = llm.invoke(prompt)
+    try:
+        response = llm.invoke(prompt)
 
-    # Extract plain text from the response (same messy format we saw
-    # during our earlier API test -- we handle it properly here)
-    if isinstance(response.content, list):
-        text = " ".join(
-            part["text"] for part in response.content if isinstance(part, dict) and "text" in part
-        )
-    else:
-        text = response.content
+        # Extract plain text from the response (same messy format we saw
+        # during our earlier API test -- we handle it properly here)
+        if isinstance(response.content, list):
+            text = " ".join(
+                part["text"] for part in response.content if isinstance(part, dict) and "text" in part
+            )
+        else:
+            text = response.content
 
-    sub_questions = [line.strip() for line in text.strip().split("\n") if line.strip()]
-    return sub_questions
+        sub_questions = [line.strip() for line in text.strip().split("\n") if line.strip()]
+        if not sub_questions:
+            return [question]  # safety net: never return an empty list
+        return sub_questions
+    except Exception:
+        # If decomposition fails for any reason (API error, bad response),
+        # fall back to treating the question as a single sub-question rather
+        # than crashing the whole retrieval pipeline.
+        return [question]
 
 
 if __name__ == "__main__":

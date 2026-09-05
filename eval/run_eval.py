@@ -11,8 +11,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent / "src" / "generation"))
 sys.path.insert(0, str(Path(__file__).parent.parent / "src" / "retrieval"))
 sys.path.insert(0, str(Path(__file__).parent.parent / "src" / "ingestion"))
+from generate_answer import answer_question
 
-from generate_answer import answer_question, retrieve_context
 
 
 def run_evaluation():
@@ -25,8 +25,7 @@ def run_evaluation():
         print(f"[{i}/{len(questions)}] {item['id']}: {item['question']}")
 
         try:
-            context_chunks = retrieve_context(item["question"], top_k=5)
-            answer_obj = answer_question(item["question"])
+            answer_obj, context_chunks = answer_question(item["question"])
 
             results.append({
                 "id": item["id"],

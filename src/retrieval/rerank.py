@@ -51,7 +51,7 @@ if __name__ == "__main__":
     bm25_results = bm25_search(query, bm25_index, chunks, top_k=20)
     semantic_results = semantic_search(query, top_k=20)
 
-    fused = reciprocal_rank_fusion(bm25_results, semantic_results, top_k=15)
+    fused = reciprocal_rank_fusion(bm25_results, semantic_results, k=60, top_k=15)
     print(f"Fusion produced {len(fused)} candidates. Reranking...\n")
 
     final_results = rerank(query, fused, top_k=5)
