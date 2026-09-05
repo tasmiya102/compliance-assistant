@@ -2,6 +2,12 @@
   {
     "id": "Q01",
     "question": "What is the gift limit employees can accept from a vendor?",
+    "ac_ids": [
+      "AC-02",
+      "AC-03",
+      "AC-04",
+      "AC-06"
+    ],
     "expected_answer": "Employees may not accept gifts exceeding $75 in value from any single vendor, client, or business partner within a calendar year.",
     "expected_doc_id": "COC-04",
     "expected_clause_id": "2.1",
@@ -11,6 +17,12 @@
   {
     "id": "Q02",
     "question": "Are cash gifts allowed under company policy?",
+    "ac_ids": [
+      "AC-02",
+      "AC-03",
+      "AC-04",
+      "AC-06"
+    ],
     "expected_answer": "No, cash or cash-equivalent gifts, including gift cards, of any amount are strictly prohibited and must be declined or returned.",
     "expected_doc_id": "COC-04",
     "expected_clause_id": "2.2",
@@ -20,6 +32,12 @@
   {
     "id": "Q03",
     "question": "What is the process for reporting a conflict of interest?",
+    "ac_ids": [
+      "AC-02",
+      "AC-03",
+      "AC-04",
+      "AC-06"
+    ],
     "expected_answer": "Employees must disclose any actual or potential conflict of interest to their manager and the Compliance team within 10 business days of becoming aware of it.",
     "expected_doc_id": "COC-02",
     "expected_clause_id": "3.1",
@@ -29,6 +47,12 @@
   {
     "id": "Q04",
     "question": "What happens if an employee retaliates against someone who reports harassment?",
+    "ac_ids": [
+      "AC-02",
+      "AC-03",
+      "AC-04",
+      "AC-06"
+    ],
     "expected_answer": "Retaliation against an employee who reports harassment or participates in an investigation is strictly prohibited and is itself a violation of policy.",
     "expected_doc_id": "COC-03",
     "expected_clause_id": "2.3",
@@ -38,6 +62,12 @@
   {
     "id": "Q05",
     "question": "Are facilitation payments to government officials allowed?",
+    "ac_ids": [
+      "AC-02",
+      "AC-03",
+      "AC-04",
+      "AC-06"
+    ],
     "expected_answer": "No, facilitation payments (small payments to expedite routine government action) are prohibited without exception.",
     "expected_doc_id": "COC-05",
     "expected_clause_id": "2.2",
@@ -47,6 +77,12 @@
   {
     "id": "Q06",
     "question": "How long do confidentiality obligations last after an employee leaves the company?",
+    "ac_ids": [
+      "AC-02",
+      "AC-03",
+      "AC-04",
+      "AC-06"
+    ],
     "expected_answer": "Confidentiality obligations continue after termination of employment, as specified in each employee's signed confidentiality agreement.",
     "expected_doc_id": "COC-06",
     "expected_clause_id": "3.2",
@@ -56,6 +92,12 @@
   {
     "id": "Q07",
     "question": "Can I report a policy violation anonymously?",
+    "ac_ids": [
+      "AC-02",
+      "AC-03",
+      "AC-04",
+      "AC-06"
+    ],
     "expected_answer": "Yes, anonymous reports are accepted and will be investigated to the extent possible given the information provided.",
     "expected_doc_id": "COC-07",
     "expected_clause_id": "2.2",
@@ -65,6 +107,12 @@
   {
     "id": "Q08",
     "question": "What data classification level requires encryption at all times?",
+    "ac_ids": [
+      "AC-02",
+      "AC-03",
+      "AC-04",
+      "AC-06"
+    ],
     "expected_answer": "Restricted data must be encrypted using company-approved encryption standards at all times, whether stored or transmitted.",
     "expected_doc_id": "PRIV-02",
     "expected_clause_id": "3.1",
@@ -74,6 +122,12 @@
   {
     "id": "Q09",
     "question": "How long is customer account data retained after account closure?",
+    "ac_ids": [
+      "AC-02",
+      "AC-03",
+      "AC-04",
+      "AC-06"
+    ],
     "expected_answer": "Customer account data is retained for 3 years after account closure, unless a longer period is required by law.",
     "expected_doc_id": "PRIV-03",
     "expected_clause_id": "2.1",
@@ -83,6 +137,12 @@
   {
     "id": "Q10",
     "question": "What must be in place before sharing personal data with a third party?",
+    "ac_ids": [
+      "AC-02",
+      "AC-03",
+      "AC-04",
+      "AC-06"
+    ],
     "expected_answer": "Personal data may only be shared with a third party after a signed Data Processing Agreement (DPA) is in place.",
     "expected_doc_id": "PRIV-04",
     "expected_clause_id": "2.1",
@@ -92,6 +152,12 @@
   {
     "id": "Q11",
     "question": "Who can access an employee's personal data within the company?",
+    "ac_ids": [
+      "AC-02",
+      "AC-03",
+      "AC-04",
+      "AC-06"
+    ],
     "expected_answer": "Employee personal data is accessible only to HR staff, the employee's direct manager for relevant records, and Payroll, on a need-to-know basis.",
     "expected_doc_id": "PRIV-05",
     "expected_clause_id": "3.1",
@@ -101,6 +167,12 @@
   {
     "id": "Q12",
     "question": "How quickly must a suspected data breach be reported?",
+    "ac_ids": [
+      "AC-02",
+      "AC-03",
+      "AC-04",
+      "AC-06"
+    ],
     "expected_answer": "Any employee who suspects a data breach must report it to the Security team immediately, and no later than 2 hours after discovery.",
     "expected_doc_id": "PRIV-06",
     "expected_clause_id": "2.1",
@@ -110,6 +182,12 @@
   {
     "id": "Q13",
     "question": "Can a customer withdraw consent for data collection at any time?",
+    "ac_ids": [
+      "AC-02",
+      "AC-03",
+      "AC-04",
+      "AC-06"
+    ],
     "expected_answer": "Yes, customers may withdraw consent at any time through their account settings or by contacting support.",
     "expected_doc_id": "PRIV-07",
     "expected_clause_id": "2.2",
@@ -119,6 +197,12 @@
   {
     "id": "Q14",
     "question": "What class must domestic flights under 5 hours be booked in?",
+    "ac_ids": [
+      "AC-02",
+      "AC-03",
+      "AC-04",
+      "AC-06"
+    ],
     "expected_answer": "Domestic flights must be booked in Economy class for flights under 5 hours.",
     "expected_doc_id": "TE-02",
     "expected_clause_id": "2.1",
@@ -128,6 +212,12 @@
   {
     "id": "Q15",
     "question": "Do I need approval for international travel?",
+    "ac_ids": [
+      "AC-02",
+      "AC-03",
+      "AC-04",
+      "AC-06"
+    ],
     "expected_answer": "Yes, international travel requires pre-approval from a Director-level manager or above, submitted at least 21 days before departure where possible.",
     "expected_doc_id": "TE-03",
     "expected_clause_id": "2.1",
@@ -137,6 +227,12 @@
   {
     "id": "Q16",
     "question": "What is the standard domestic meal per diem?",
+    "ac_ids": [
+      "AC-02",
+      "AC-03",
+      "AC-04",
+      "AC-06"
+    ],
     "expected_answer": "The standard domestic meal per diem is $75 per day, covering breakfast, lunch, and dinner.",
     "expected_doc_id": "TE-04",
     "expected_clause_id": "2.1",
@@ -146,6 +242,12 @@
   {
     "id": "Q17",
     "question": "What is the mileage reimbursement rate for using a personal vehicle?",
+    "ac_ids": [
+      "AC-02",
+      "AC-03",
+      "AC-04",
+      "AC-06"
+    ],
     "expected_answer": "Employees using a personal vehicle for business travel are reimbursed at $0.67 per mile.",
     "expected_doc_id": "TE-05",
     "expected_clause_id": "4.1",
@@ -155,6 +257,12 @@
   {
     "id": "Q18",
     "question": "How long do I have to submit an expense report?",
+    "ac_ids": [
+      "AC-02",
+      "AC-03",
+      "AC-04",
+      "AC-06"
+    ],
     "expected_answer": "Expense reports must be submitted within 30 days of the expense being incurred.",
     "expected_doc_id": "TE-06",
     "expected_clause_id": "2.1",
@@ -164,6 +272,12 @@
   {
     "id": "Q19",
     "question": "Can I use my corporate card for personal purchases if I plan to pay it back?",
+    "ac_ids": [
+      "AC-02",
+      "AC-03",
+      "AC-04",
+      "AC-06"
+    ],
     "expected_answer": "No, personal purchases on a corporate card are strictly prohibited, even if the employee intends to reimburse the company later.",
     "expected_doc_id": "TE-07",
     "expected_clause_id": "3.2",
@@ -173,6 +287,12 @@
   {
     "id": "Q20",
     "question": "What approval is needed for a purchase between $10,000 and $50,000?",
+    "ac_ids": [
+      "AC-02",
+      "AC-03",
+      "AC-04",
+      "AC-06"
+    ],
     "expected_answer": "Purchases between $10,000 and $50,000 require Vice President approval.",
     "expected_doc_id": "PROC-03",
     "expected_clause_id": "2.3",
@@ -182,6 +302,12 @@
   {
     "id": "Q21",
     "question": "How many competitive bids are required for purchases over $50,000?",
+    "ac_ids": [
+      "AC-02",
+      "AC-03",
+      "AC-04",
+      "AC-06"
+    ],
     "expected_answer": "Purchases exceeding $50,000 require a minimum of 3 competitive bids before vendor selection, unless a sole source exception applies.",
     "expected_doc_id": "PROC-04",
     "expected_clause_id": "2.1",
@@ -191,6 +317,12 @@
   {
     "id": "Q22",
     "question": "What password length is required for company systems?",
+    "ac_ids": [
+      "AC-02",
+      "AC-03",
+      "AC-04",
+      "AC-06"
+    ],
     "expected_answer": "Passwords must be a minimum of 14 characters and include a mix of uppercase, lowercase, numbers, and symbols.",
     "expected_doc_id": "SEC-02",
     "expected_clause_id": "2.1",
@@ -200,6 +332,12 @@
   {
     "id": "Q23",
     "question": "How quickly must access be revoked when an employee is terminated?",
+    "ac_ids": [
+      "AC-02",
+      "AC-03",
+      "AC-04",
+      "AC-06"
+    ],
     "expected_answer": "All system access must be revoked within 4 hours of an employee's termination or resignation becoming effective.",
     "expected_doc_id": "SEC-06",
     "expected_clause_id": "5.1",
@@ -209,6 +347,10 @@
   {
     "id": "Q24",
     "question": "What is the CEO's home address?",
+    "ac_ids": [
+      "AC-05",
+      "AC-06"
+    ],
     "expected_answer": "The policy corpus does not contain any information about individual employee home addresses, including the CEO's.",
     "expected_doc_id": null,
     "expected_clause_id": null,
@@ -218,6 +360,10 @@
   {
     "id": "Q25",
     "question": "What is the company's stock price today?",
+    "ac_ids": [
+      "AC-05",
+      "AC-06"
+    ],
     "expected_answer": "The policy corpus does not contain real-time financial or stock price information.",
     "expected_doc_id": null,
     "expected_clause_id": null,

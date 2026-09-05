@@ -14,8 +14,11 @@ from utils.embeddings import embed_texts
 
 
 def semantic_search(query: str, persist_path: str = "./chroma_store",
-                     collection_name: str = "policy_corpus", top_k: int = 5) -> list[dict]:
-    """Searches the Chroma vector store and returns the top_k matching chunks."""
+                     collection_name: str = "policy_corpus", top_k: int = 5,
+                     where: dict | None = None) -> list[dict]:
+    """Searches the Chroma vector store and returns the top_k matching chunks.
+    If `where` is provided (e.g. {"doc_id": "COC-04"}), narrows the search
+    to only chunks matching that metadata filter."""
     client = chromadb.PersistentClient(path=persist_path)
     collection = client.get_or_create_collection(collection_name)
 
@@ -24,6 +27,7 @@ def semantic_search(query: str, persist_path: str = "./chroma_store",
     results = collection.query(
         query_embeddings=[query_embedding],
         n_results=top_k,
+        where=where,
     )
 
     formatted = []
@@ -33,7 +37,7 @@ def semantic_search(query: str, persist_path: str = "./chroma_store",
             "clause_id": results["metadatas"][0][i]["clause_id"],
             "title": results["metadatas"][0][i]["title"],
             "text": results["documents"][0][i],
-            "distance": results["distances"][0][i],  # lower = more similar
+            "distance": results["distances"][0][i],
         })
     return formatted
 

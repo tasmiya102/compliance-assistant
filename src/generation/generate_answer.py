@@ -5,7 +5,10 @@ rerank), and asks Gemini to answer ONLY using those clauses, in our
 required structured format -- abstaining if the clauses don't actually
 support an answer.
 """
+import logging
 
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
+logger = logging.getLogger(__name__)
 import sys
 import yaml
 from pathlib import Path
@@ -59,33 +62,41 @@ def get_bm25_setup():
     return _bm25_index, _chunks
 
 
-def retrieve_context(question: str) -> list[dict]:
+def retrieve_context(question: str, doc_id_filter: str | None = None) -> list[dict]:
     """
     Decomposes the question into sub-questions (if multi-part), runs the
     full hybrid pipeline (BM25 + semantic -> fuse) for EACH sub-question,
     deduplicates the combined candidates, then reranks once against the
     original question for a coherent final context set.
+
+    If doc_id_filter is provided, narrows the search to only that
+    document's clauses (e.g. "COC-04").
     """
     r_cfg = _CONFIG["retrieval"]
     bm25_index, chunks = get_bm25_setup()
 
     sub_questions = decompose_query(question)
+    logger.info(f"Query decomposed into {len(sub_questions)} sub-question(s)")
 
-    all_fused = {}  # chunk_key -> chunk dict, deduped across sub-questions
+    if doc_id_filter:
+        chunks = [c for c in chunks if c["doc_id"] == doc_id_filter]
+
+    all_fused = {}
     for sub_q in sub_questions:
         bm25_results = bm25_search(sub_q, bm25_index, chunks, top_k=r_cfg["bm25_top_k"])
-        semantic_results = semantic_search(sub_q, top_k=r_cfg["semantic_top_k"])
+        semantic_results = semantic_search(
+            sub_q, top_k=r_cfg["semantic_top_k"],
+            where={"doc_id": doc_id_filter} if doc_id_filter else None
+        )
         fused = reciprocal_rank_fusion(
             bm25_results, semantic_results,
             k=r_cfg["rrf_k"], top_k=r_cfg["fusion_top_k"]
         )
         for chunk in fused:
             key = f"{chunk['doc_id']}-{chunk['clause_id']}"
-            all_fused[key] = chunk  # last write wins; duplicates collapse naturally
+            all_fused[key] = chunk
 
     deduped = list(all_fused.values())
-    # Rerank the combined, deduped pool against the ORIGINAL question,
-    # so the final context is coherent for answering the full question.
     return rerank(question, deduped, top_k=r_cfg["final_top_k"])
 
 
@@ -104,6 +115,11 @@ outside knowledge.
 If the context does NOT contain enough information to confidently answer
 the question, you MUST set "abstained" to true, leave "citations" empty,
 and explain in "answer" that the policy corpus does not cover this.
+
+CRITICAL: You must return a complete, valid JSON object with EVERY field
+below populated -- never omit a field, never truncate your response, and
+never return partial output. Every citation must include both "doc_id"
+AND "clause_id".
 
 {format_instructions}
 
@@ -134,15 +150,32 @@ def _invoke_chain(chain, question: str) -> PolicyAnswer:
     return chain.invoke({"question": question})
 
 
-def answer_question(question: str) -> tuple[PolicyAnswer, list[dict]]:
+def answer_question(question: str, doc_id_filter: str | None = None) -> tuple[PolicyAnswer, list[dict]]:
     """Full pipeline entry point, with retry on transient provider errors.
-    Returns both the structured answer and the context chunks used, so
-    callers (like the eval harness) don't need a separate retrieval call."""
-    context_chunks = retrieve_context(question)
+    Returns both the structured answer and the context chunks used.
+    If the LLM's output fails structured-output validation even after
+    retries, falls back to a safe abstention response rather than
+    crashing the caller."""
+    context_chunks = retrieve_context(question, doc_id_filter=doc_id_filter)
     chain = _build_chain_from_context(context_chunks)
-    answer = _invoke_chain(chain, question)
-    return answer, context_chunks
 
+    try:
+        answer = _invoke_chain(chain, question)
+    except Exception as e:
+        logger.warning(f"Structured output parsing failed after retries: {e}")
+        answer = PolicyAnswer(
+            answer="The system was unable to generate a valid structured response "
+                   "for this question. Please rephrase or try again.",
+            citations=[],
+            applicable_policy="N/A",
+            rule_or_limit="N/A",
+            required_approval="None",
+            confidence="low",
+            abstained=True,
+        )
+
+    logger.info(f"Answered question | confidence={answer.confidence} | abstained={answer.abstained}")
+    return answer, context_chunks
 
 if __name__ == "__main__":
     question = "What is the CEO's annual salary?"

@@ -4,7 +4,7 @@
     "question": "What is the gift limit employees can accept from a vendor?",
     "expected_answer": "Employees may not accept gifts exceeding $75 in value from any single vendor, client, or business partner within a calendar year.",
     "should_abstain": false,
-    "system_answer": "Employees may not accept gifts exceeding $75 in value from any single vendor, client, or business partner within a calendar year.",
+    "system_answer": "Employees may not accept gifts exceeding $75 in value from any single vendor, client, or business partner within a calendar year. Additionally, employees involved in bid evaluation may not accept any gifts or entertainment from bidding vendors during the evaluation period.",
     "system_abstained": false,
     "system_confidence": "high",
     "retrieved_contexts": [
@@ -18,6 +18,10 @@
       [
         "COC-04",
         "2.1"
+      ],
+      [
+        "PROC-04",
+        "4.2"
       ]
     ]
   },
@@ -26,7 +30,7 @@
     "question": "Are cash gifts allowed under company policy?",
     "expected_answer": "No, cash or cash-equivalent gifts, including gift cards, of any amount are strictly prohibited and must be declined or returned.",
     "should_abstain": false,
-    "system_answer": "Cash or cash-equivalent gifts (including gift cards) of any amount are strictly prohibited under company policy and must be declined or returned.",
+    "system_answer": "No, cash gifts (and cash-equivalent gifts, such as gift cards) of any amount are strictly prohibited under company policy and must be declined or returned.",
     "system_abstained": false,
     "system_confidence": "high",
     "retrieved_contexts": [
@@ -48,7 +52,7 @@
     "question": "What is the process for reporting a conflict of interest?",
     "expected_answer": "Employees must disclose any actual or potential conflict of interest to their manager and the Compliance team within 10 business days of becoming aware of it.",
     "should_abstain": false,
-    "system_answer": "To report a conflict of interest, employees must disclose any actual or potential conflict to their manager and the Compliance team within 10 business days of becoming aware of it. In addition, all employees must complete an annual Conflict of Interest disclosure form, regardless of whether they believe a conflict exists.",
+    "system_answer": "To report a conflict of interest, employees must disclose any actual or potential conflict to their manager and the Compliance team within 10 business days of becoming aware of it. Additionally, all employees must complete an annual Conflict of Interest disclosure form regardless of whether they believe a conflict exists, and procurement personnel must disclose conflicts prior to participating in vendor selection.",
     "system_abstained": false,
     "system_confidence": "high",
     "retrieved_contexts": [
@@ -66,20 +70,45 @@
       [
         "COC-02",
         "4.1"
+      ],
+      [
+        "PROC-01",
+        "4.1"
       ]
     ]
   },
   {
     "id": "Q04",
     "question": "What happens if an employee retaliates against someone who reports harassment?",
-    "error": "Failed to parse PolicyAnswer from completion {\"answer\": \"Retaliation against an employee who reports harassment is strictly prohibited and is a violation of company policy. Additionally, under the Whistleblower\"}. Got: 6 validation errors for PolicyAnswer\ncitations\n  Field required [type=missing, input_value={'answer': 'Retaliation a...nder the Whistleblower'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\napplicable_policy\n  Field required [type=missing, input_value={'answer': 'Retaliation a...nder the Whistleblower'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\nrule_or_limit\n  Field required [type=missing, input_value={'answer': 'Retaliation a...nder the Whistleblower'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\nrequired_approval\n  Field required [type=missing, input_value={'answer': 'Retaliation a...nder the Whistleblower'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\nconfidence\n  Field required [type=missing, input_value={'answer': 'Retaliation a...nder the Whistleblower'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\nabstained\n  Field required [type=missing, input_value={'answer': 'Retaliation a...nder the Whistleblower'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\nFor troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE "
+    "expected_answer": "Retaliation against an employee who reports harassment or participates in an investigation is strictly prohibited and is itself a violation of policy.",
+    "should_abstain": false,
+    "system_answer": "Retaliation against an employee who reports harassment or participates in an investigation is strictly prohibited and constitutes a violation of the policy. Furthermore, any employee found to have retaliated faces disciplinary action up to and including termination.",
+    "system_abstained": false,
+    "system_confidence": "high",
+    "retrieved_contexts": [
+      "Retaliation against an employee who reports harassment or participates  in an investigation is strictly prohibited and is itself a violation of  this policy.    ## Section 3: Reporting Process",
+      "Any employee found to have retaliated against a whistleblower will face  disciplinary action up to and including termination.    ## Section 4: Investigation Process",
+      "Employees who experience or witness harassment should report it to  their manager, HR, or via the confidential Whistleblower channel (COC-07).",
+      "Solara Technologies Inc. strictly prohibits retaliation against any  employee who makes a good-faith report under this policy.",
+      "Any employee who becomes aware of a violation of this policy must report  it via the Whistleblower & Reporting Policy (COC-07) channels."
+    ],
+    "citations": [
+      [
+        "COC-03",
+        "2.3"
+      ],
+      [
+        "COC-07",
+        "3.2"
+      ]
+    ]
   },
   {
     "id": "Q05",
     "question": "Are facilitation payments to government officials allowed?",
     "expected_answer": "No, facilitation payments (small payments to expedite routine government action) are prohibited without exception.",
     "should_abstain": false,
-    "system_answer": "No, facilitation payments (small payments made to expedite routine government action) are strictly prohibited without exception.",
+    "system_answer": "No, facilitation payments to expedite routine government actions are prohibited without exception.",
     "system_abstained": false,
     "system_confidence": "high",
     "retrieved_contexts": [
@@ -101,7 +130,7 @@
     "question": "How long do confidentiality obligations last after an employee leaves the company?",
     "expected_answer": "Confidentiality obligations continue after termination of employment, as specified in each employee's signed confidentiality agreement.",
     "should_abstain": false,
-    "system_answer": "Confidentiality obligations continue after the termination of employment as specified in each employee's signed confidentiality agreement.",
+    "system_answer": "Confidentiality obligations continue after termination of employment as specified in each employee's signed confidentiality agreement.",
     "system_abstained": false,
     "system_confidence": "high",
     "retrieved_contexts": [
@@ -123,7 +152,7 @@
     "question": "Can I report a policy violation anonymously?",
     "expected_answer": "Yes, anonymous reports are accepted and will be investigated to the extent possible given the information provided.",
     "should_abstain": false,
-    "system_answer": "The provided policy context does not contain sufficient information to state whether reports can be made anonymously. It specifies that reports are made through a confidential channel under the Whistleblower & Reporting Policy (COC-07), but does not explicitly address anonymous reporting.",
+    "system_answer": "The provided policy context does not contain information regarding whether policy violations can be reported anonymously. It only specifies that the Whistleblower & Reporting Policy (COC-07) provides a confidential channel.",
     "system_abstained": true,
     "system_confidence": "low",
     "retrieved_contexts": [
@@ -140,7 +169,7 @@
     "question": "What data classification level requires encryption at all times?",
     "expected_answer": "Restricted data must be encrypted using company-approved encryption standards at all times, whether stored or transmitted.",
     "should_abstain": false,
-    "system_answer": "The Restricted data classification level requires encryption at all times, whether stored or transmitted (at rest and in transit).",
+    "system_answer": "The 'Restricted' data classification level requires encryption at all times, whether stored or transmitted (at rest and in transit).",
     "system_abstained": false,
     "system_confidence": "high",
     "retrieved_contexts": [
@@ -166,7 +195,7 @@
     "question": "How long is customer account data retained after account closure?",
     "expected_answer": "Customer account data is retained for 3 years after account closure, unless a longer period is required by law.",
     "should_abstain": false,
-    "system_answer": "Customer account data is retained for 3 years after account closure, unless a longer period is required by law.",
+    "system_answer": "Customer account data is retained for 3 years after account closure, unless a longer retention period is required by law.",
     "system_abstained": false,
     "system_confidence": "high",
     "retrieved_contexts": [
@@ -188,7 +217,7 @@
     "question": "What must be in place before sharing personal data with a third party?",
     "expected_answer": "Personal data may only be shared with a third party after a signed Data Processing Agreement (DPA) is in place.",
     "should_abstain": false,
-    "system_answer": "Before personal data can be shared with a third party, a signed Data Processing Agreement (DPA) must be in place.",
+    "system_answer": "Before personal data may be shared with a third party, a signed Data Processing Agreement (DPA) must be in place.",
     "system_abstained": false,
     "system_confidence": "high",
     "retrieved_contexts": [
@@ -210,7 +239,7 @@
     "question": "Who can access an employee's personal data within the company?",
     "expected_answer": "Employee personal data is accessible only to HR staff, the employee's direct manager for relevant records, and Payroll, on a need-to-know basis.",
     "should_abstain": false,
-    "system_answer": "Within the company, an employee's personal data is accessible only to HR staff, the employee's direct manager (for relevant records), and Payroll, on a need-to-know basis.",
+    "system_answer": "Within the company, employee personal data is accessible only to HR staff, the employee's direct manager (for relevant records), and Payroll, on a need-to-know basis.",
     "system_abstained": false,
     "system_confidence": "high",
     "retrieved_contexts": [
@@ -232,7 +261,7 @@
     "question": "How quickly must a suspected data breach be reported?",
     "expected_answer": "Any employee who suspects a data breach must report it to the Security team immediately, and no later than 2 hours after discovery.",
     "should_abstain": false,
-    "system_answer": "An employee who suspects a data breach must report it to the Security team immediately, and no later than 2 hours after discovery. If the breach involves a vendor handling Solara data, the vendor must report it to Solara within 48 hours of becoming aware.",
+    "system_answer": "A suspected data breach must be reported by an employee to the Security team immediately, and no later than 2 hours after discovery. If the vendor data breach involves Solara data, the vendor must report it to Solara within 48 hours of becoming aware.",
     "system_abstained": false,
     "system_confidence": "high",
     "retrieved_contexts": [
@@ -258,7 +287,7 @@
     "question": "Can a customer withdraw consent for data collection at any time?",
     "expected_answer": "Yes, customers may withdraw consent at any time through their account settings or by contacting support.",
     "should_abstain": false,
-    "system_answer": "Yes, customers may withdraw consent at any time through their account settings or by contacting support.",
+    "system_answer": "Yes, customers may withdraw their consent at any time either through their account settings or by contacting support.",
     "system_abstained": false,
     "system_confidence": "high",
     "retrieved_contexts": [
@@ -302,7 +331,7 @@
     "question": "Do I need approval for international travel?",
     "expected_answer": "Yes, international travel requires pre-approval from a Director-level manager or above, submitted at least 21 days before departure where possible.",
     "should_abstain": false,
-    "system_answer": "Yes, international travel requires pre-approval from a Director-level manager or above, submitted at least 21 days prior to departure where possible. Additionally, if you are traveling to a country on the company's restricted travel list, approval from the Security team is also required.",
+    "system_answer": "Yes, international travel requires pre-approval from a Director-level manager or above, submitted at least 21 days prior to departure where possible. Additionally, if traveling to a country on the company's restricted travel list, approval from the Security team is also required.",
     "system_abstained": false,
     "system_confidence": "high",
     "retrieved_contexts": [
@@ -372,7 +401,7 @@
     "question": "How long do I have to submit an expense report?",
     "expected_answer": "Expense reports must be submitted within 30 days of the expense being incurred.",
     "should_abstain": false,
-    "system_answer": "You must submit an expense report within 30 days of incurring the expense. Expenses submitted more than 90 days after being incurred will not be reimbursed unless exceptional circumstances are approved by Finance.",
+    "system_answer": "Expense reports must be submitted within 30 days of incurring the expense. Any expenses submitted more than 90 days after being incurred will not be reimbursed unless exceptional circumstances are approved by Finance.",
     "system_abstained": false,
     "system_confidence": "high",
     "retrieved_contexts": [
@@ -398,7 +427,7 @@
     "question": "Can I use my corporate card for personal purchases if I plan to pay it back?",
     "expected_answer": "No, personal purchases on a corporate card are strictly prohibited, even if the employee intends to reimburse the company later.",
     "should_abstain": false,
-    "system_answer": "No, personal purchases on a corporate card are strictly prohibited, even if you intend to reimburse the company later.",
+    "system_answer": "No, you cannot use your corporate card for personal purchases, even if you plan to reimburse the company later. Personal purchases on a corporate card are strictly prohibited.",
     "system_abstained": false,
     "system_confidence": "high",
     "retrieved_contexts": [
@@ -442,7 +471,7 @@
     "question": "How many competitive bids are required for purchases over $50,000?",
     "expected_answer": "Purchases exceeding $50,000 require a minimum of 3 competitive bids before vendor selection, unless a sole source exception applies.",
     "should_abstain": false,
-    "system_answer": "Purchases exceeding $50,000 require a minimum of 3 competitive bids before vendor selection, unless a sole source exception applies under PROC-06.",
+    "system_answer": "Purchases exceeding $50,000 require a minimum of 3 competitive bids before selecting a vendor, unless a sole source exception applies under PROC-06.",
     "system_abstained": false,
     "system_confidence": "high",
     "retrieved_contexts": [
@@ -464,7 +493,7 @@
     "question": "What password length is required for company systems?",
     "expected_answer": "Passwords must be a minimum of 14 characters and include a mix of uppercase, lowercase, numbers, and symbols.",
     "should_abstain": false,
-    "system_answer": "Passwords used to access company systems must be a minimum of 14 characters long and include a mix of uppercase letters, lowercase letters, numbers, and symbols.",
+    "system_answer": "Passwords required to access Solara Technologies Inc. systems must be a minimum of 14 characters in length and include a mix of uppercase letters, lowercase letters, numbers, and symbols.",
     "system_abstained": false,
     "system_confidence": "high",
     "retrieved_contexts": [
@@ -508,7 +537,7 @@
     "question": "What is the CEO's home address?",
     "expected_answer": "The policy corpus does not contain any information about individual employee home addresses, including the CEO's.",
     "should_abstain": true,
-    "system_answer": "I am unable to answer your question because the provided policy documents do not contain information regarding the CEO's home address.",
+    "system_answer": "I am unable to answer this question because the provided policy corpus does not contain information about the CEO's home address.",
     "system_abstained": true,
     "system_confidence": "low",
     "retrieved_contexts": [
@@ -525,7 +554,7 @@
     "question": "What is the company's stock price today?",
     "expected_answer": "The policy corpus does not contain real-time financial or stock price information.",
     "should_abstain": true,
-    "system_answer": "I am sorry, but the provided policy context does not contain information regarding the company's stock price.",
+    "system_answer": "The provided policy corpus does not contain information regarding the company's stock price.",
     "system_abstained": true,
     "system_confidence": "low",
     "retrieved_contexts": [

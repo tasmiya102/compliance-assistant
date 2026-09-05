@@ -6,7 +6,10 @@ persisted Chroma vector store.
 Re-runnable and idempotent: running this again will not create duplicates,
 because we use each clause's doc_id + clause_id as a stable unique ID.
 """
+import logging
 
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
+logger = logging.getLogger(__name__)
 import sys
 from pathlib import Path
 
@@ -31,7 +34,7 @@ def build_index():
     corpus_dir = Path(__file__).parent.parent.parent / "corpus"
     md_files = sorted(corpus_dir.rglob("*.md"))
     print(f"[1/4] Found {len(md_files)} documents in corpus/")
-
+    
     # Step 1: chunk every document
     all_chunks = []
     for filepath in md_files:
@@ -51,7 +54,11 @@ def build_index():
     print(f"[3/4] Storing chunks in Chroma at '{persist_path}' (collection: {collection_name})...")
 
     client = chromadb.PersistentClient(path=persist_path)
-    collection = client.get_or_create_collection(collection_name)
+    collection = client.get_or_create_collection(
+    collection_name,
+    metadata={"hnsw:space": "cosine"}
+
+)
 
     ids = [f"{c['doc_id']}-{c['clause_id']}" for c in all_chunks]
     documents = texts
@@ -74,7 +81,7 @@ def build_index():
     )
 
     print(f"[4/4] Done. Collection now contains {collection.count()} chunks.")
-
+    logger.info(f"Ingestion complete: {collection.count()} chunks indexed into '{collection_name}'")
 
 if __name__ == "__main__":
     build_index()
